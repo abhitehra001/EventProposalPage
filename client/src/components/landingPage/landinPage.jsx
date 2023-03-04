@@ -4,6 +4,7 @@ import LandingPageListItem from "../landingPageListItem/landingPageList"
 import { useState } from "react";
 import {Delete} from "@mui/icons-material"
 import { useEffect } from "react";
+import Swal from "sweetalert2";
 import axios from "axios";
 const LandingPage=()=>{
     const [selected,setSelected]=useState({isValid:false,data:{}});
