@@ -23,7 +23,7 @@ const Register=()=>{
     const errorMessageHandler=(type)=>{
         switch(type){
           case "userName":{
-              if(form.userName.length>=5 && form.userName.length<=10)
+              if(form.userName.length>=5 && form.userName.length<=20)
               {
                   
                     errorHandler({...error,userName:{isValid:true,message:""}});                   
