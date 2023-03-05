@@ -18,6 +18,7 @@ const app = express();
 app.use(cors({
     credentials:true,
     origin:reactUrl,
+    allowedHeaders:"*"
 }));
 app.use(session({
     resave: false,

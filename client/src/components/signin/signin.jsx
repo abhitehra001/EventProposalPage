@@ -151,11 +151,10 @@ const Signin=()=>{
     return(
         <>
          <article className="signinPageContainer">
-       <h1>LOGO</h1>
+       <h1>EVP</h1>
         <section>
             <section>
-                <p>TEXT WILL <br/> BE DISPLAYED  HERE</p>
-                <button>End User</button>
+                <p>Create Your own <br/> Proposal <br/> Or <br/> Choose Proposal of <br/> your choice</p>
             </section>
             <section>
                 <form className="signinPageForm">
