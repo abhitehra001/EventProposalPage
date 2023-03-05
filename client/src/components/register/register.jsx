@@ -217,10 +217,10 @@ const dataBaseToggleHandler=(e)=>{
     return(
         <>
        <article className="registrationPageContainer">
-       <h1>LOGO</h1>
+       <h1>EVP</h1>
         <section>
             <section>
-                <p>TEXT WILL <br/> BE DISPLAYED  HERE</p>
+                <p>Create Your own <br/> Proposal <br/> Or <br/> Choose Proposal of <br/> your choice</p>
                 <button>End User</button>
             </section>
             <section>
