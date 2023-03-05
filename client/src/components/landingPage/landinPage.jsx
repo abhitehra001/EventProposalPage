@@ -6,7 +6,6 @@ import {Delete} from "@mui/icons-material"
 import { useEffect } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
-import Swal from "sweetalert2";
 const LandingPage=()=>{
     const [selected,setSelected]=useState({isValid:false,data:{}});
     const [arr,setArr]=useState(Array(selected.data.length).fill(false));
