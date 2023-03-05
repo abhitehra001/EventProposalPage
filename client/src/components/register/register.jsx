@@ -30,7 +30,7 @@ const Register=()=>{
                }
               else{
                   setForm({...form,userName:""});
-                  errorHandler({...error,userName:{isValid:false,message:"The number of charecters should be between 5 and 10 "}})
+                  errorHandler({...error,userName:{isValid:false,message:"The number of charecters should be between 5 and 20 "}})
               }
               break;
           }
