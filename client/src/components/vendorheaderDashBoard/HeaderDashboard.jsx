@@ -24,21 +24,11 @@ const HeaderDashboard = () => {
     }
     useEffect(() => { checkSession() }, [])
     const [vendorName, setVendorName] = useState("");
-    useEffect(() => {
-        setTimeout(() => {
-            axios.get("https://eventproposalserver.onrender.com/vendors/info", { withCredentials: true }).then(data => {
-                setVendorName(data.data.vendorName);
-            }).catch(err=>{
-                console.log(err);
-            })
-        }, 500)
-    }, [])
     return <header id="headerDashboard">
         <img id="headerDashboardLogo" src="/images/logo.jpeg" alt="logo" />
         <div>
             <span>{vendorName}</span>
             <button id="logout" onClick={() => {
-                axios.get("https://eventproposalserver.onrender.com/vendors/logout", { withCredentials: true }).then(() => {
                     Swal.fire({
                         title: 'Do you want to proceed with logout?',
                         showDenyButton: true,
@@ -47,10 +37,12 @@ const HeaderDashboard = () => {
                         denyButtonText: `No`,
                       }).then((result) => {
                         if (result.isConfirmed) {
-                          navigate("/");
+                            axios.get("https://eventproposalserver.onrender.com/vendors/logout", { withCredentials: true })
+                            .then(() => {
+                            navigate("/");
+                        })
                         } 
                       })
-                })
             }}>Log out</button>
         </div>
     </header>

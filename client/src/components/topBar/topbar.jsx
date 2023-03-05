@@ -16,20 +16,20 @@ const TopBar = ({ user }) => {
   }
   useEffect(() => { checkSession() }, [])
   const userLogout = () => {
-    axios.get("https://eventproposalserver.onrender.com/users/logout", { withCredentials: true }).then((res) => {
-      Swal.fire({
-        title: 'Do you want to proceed with logout?',
-        showDenyButton: true,
-        showCancelButton: false,
-        confirmButtonText: 'Logout',
-        denyButtonText: `No`,
-      }).then((result) => {
-        if (result.isConfirmed) {
+
+    Swal.fire({
+      title: 'Do you want to proceed with logout?',
+      showDenyButton: true,
+      showCancelButton: false,
+      confirmButtonText: 'Logout',
+      denyButtonText: `No`,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios.get("https://eventproposalserver.onrender.com/users/logout", { withCredentials: true })
+        .then((res) => {
           navigate("/");
-        }
-      })
-
-
+        })
+      }
     }).catch((e) => { console.log(e) })
   }
   return (
