@@ -221,7 +221,6 @@ const dataBaseToggleHandler=(e)=>{
         <section>
             <section>
                 <p>Create Your own <br/> Proposal <br/> Or <br/> Choose Proposal of <br/> your choice</p>
-                <button>End User</button>
             </section>
             <section>
                 <form className="registrationPageForm">
