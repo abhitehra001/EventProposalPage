@@ -49,8 +49,8 @@ const UpdateProposal=({update, setUpdate})=>{
     const uploadImages = async(val) => {
         const data=new FormData();
         data.append("file",val);
-        data.append("upload_preset","uttej2233");
-        return axios.post("https://api.cloudinary.com/v1_1/db8cyhega/image/upload",data).then(res=>{
+        data.append("upload_preset","abhi001");
+        return axios.post("https://api.cloudinary.com/v1_1/dq600wlce/image/upload",data).then(res=>{
             return res.data.url
         })
     }
