@@ -12,7 +12,7 @@ const HeaderDashboard = () => {
             if (res.data.msg !== "vendor") {
                 navigate("/");
             } else {
-                axios.get("hthttps://eventproposalserver.onrender.com/vendors/info", { withCredentials: true }).then(data => {
+                axios.get("https://eventproposalserver.onrender.com/vendors/info", { withCredentials: true }).then(data => {
                     setVendorName(data.data.vendorName);
                 }).catch(err => {
                     console.log(err);

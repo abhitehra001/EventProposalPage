@@ -53,7 +53,7 @@ app.get("/check", getAuthenticate, (req, res)=>{
         })
     }
 })
-app.use("/events", getAuthenticate, proposalRouter);//abhijeeth
+app.use("/events", proposalRouter);//abhijeeth
 app.use("/users", userRouter);//uttej
 app.use("/vendors", vendorRouter);//srinivas
 app.get("/", (req, res)=>{
