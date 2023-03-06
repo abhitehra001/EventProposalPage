@@ -22,7 +22,7 @@ const LandingPage=()=>{
             denyButtonText: `Cancel`
         }).then((result) => {
             if (result.isConfirmed) {
-                axios.put(`https://eventproposalserver.onrender.com/users/${userInfo._id}`, { select: "" }, { withCredentials:true })
+                axios.put(`https://eventproposalserver.onrender.com/users/${userInfo._id}`, { select: "" })
                     .then((response) => { setSelected({ isValid: false, data: {} }) })
                     .catch((e) => { console.log("error in deleting") })
 
