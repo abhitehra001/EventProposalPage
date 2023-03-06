@@ -86,7 +86,7 @@ const ViewProposal = ({ setUpdate }) => {
                                     denyButtonText: `Cancel`,
                                     }).then((result) => {
                                     if (result.isConfirmed) {
-                                        axios.delete(`https://eventproposalserver.onrender.com/events/${data._id}`).then((response)=>{
+                                        axios.delete(`https://eventproposalserver.onrender.com/events/${data._id}`, {withCredentials:true}).then((response)=>{
                                             reloadData("");
                                          }).catch(err=>{
                                              console.log(err);

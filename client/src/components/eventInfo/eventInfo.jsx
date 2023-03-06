@@ -13,7 +13,7 @@ const EventInfo=(props)=>{
         {
             
            
-            axios.put(`https://eventproposalserver.onrender.com/users/${props.user}`,{select:props.show._id})
+            axios.put(`https://eventproposalserver.onrender.com/users/${props.user}`,{select:props.show._id}, {withCredentials:true})
             .then((response)=>{
                 Swal.fire({
                     title: 'Add this proposal?',
